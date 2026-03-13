@@ -1,0 +1,134 @@
+.container {
+  padding: 4rem 1.5rem;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: var(--secondary);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.stat {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.statIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: #f0f9ff;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.stat p {
+  font-size: 0.875rem;
+  color: var(--secondary);
+}
+
+.ordersSection h2 {
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border);
+}
+
+.empty p {
+  margin-bottom: 1.5rem;
+  color: var(--secondary);
+}
+
+.orderList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.orderCard {
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.orderCard:hover {
+  transform: translateX(5px);
+}
+
+.orderInfo {
+  flex-grow: 1;
+}
+
+.orderHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.serviceName {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status.pending { background: #fef9c3; color: #a16207; }
+.status.confirmed { background: #dcfce7; color: #15803d; }
+.status.processing { background: #dbeafe; color: #1d4ed8; }
+.status.completed { background: #f0fdf4; color: #16a34a; }
+
+.orderDetails {
+  display: flex;
+  gap: 2rem;
+  color: var(--secondary);
+  font-size: 0.875rem;
+}
+
+.chevron {
+  color: var(--border);
+}
+
+@media (max-width: 768px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
