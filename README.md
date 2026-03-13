@@ -2,7 +2,6 @@
 
 AquaClean è una piattaforma CMS moderna e completa per la gestione di un servizio di lavanderia premium. Sviluppata con **Next.js 15**, **MongoDB** e **Stripe**, offre un'esperienza utente raffinata e strumenti di amministrazione potenti.
 
-![AquaClean Preview](public/images/hero_bg.png)
 
 ## ✨ Caratteristiche Principali
 
@@ -78,4 +77,4 @@ Per creare il primo account amministratore:
 
 ---
 
-Realizzato con ❤️ per AquaClean.
+Realizzato con ❤️ per tutta la community di sviluppatori di GitHub.
