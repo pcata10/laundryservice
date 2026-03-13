@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧺 AquaClean - CMS Lavanderia Professionale
 
-## Getting Started
+AquaClean è una piattaforma CMS moderna e completa per la gestione di un servizio di lavanderia premium. Sviluppata con **Next.js 15**, **MongoDB** e **Stripe**, offre un'esperienza utente raffinata e strumenti di amministrazione potenti.
 
-First, run the development server:
+![AquaClean Preview](public/images/hero_bg.png)
 
+## ✨ Caratteristiche Principali
+
+### 👤 Area Utente
+- **Autenticazione Sicura**: Registrazione e Login gestiti con NextAuth.js (BCrypt per la cifratura delle password).
+- **Prenotazione Servizi**: Selezione intuitiva tra vari tipi di lavaggio (Lava e Piega, Lavaggio a Secco, ecc.).
+- **Scheduling Intelligente**: Scelta di data e orario per il ritiro e la consegna a domicilio.
+- **Dashboard Personale**: Monitoraggio in tempo reale dello stato degli ordini e storico prenotazioni.
+- **Pagamenti Online**: Integrazione sicura con **Stripe** per pagamenti con carta di credito.
+
+### 🛡️ Pannello Amministratore
+- **Console di Gestione**: Dashboard dedicata per visualizzare tutti gli ordini in arrivo.
+- **Flusso di Lavoro**: Gestione degli stati dell'ordine (In attesa -> Confermato -> In lavorazione -> Completato).
+- **Notifiche Automatiche**: Sistema integrato per l'invio di email di conferma a utenti e admin tramite Nodemailer.
+
+### 🎨 Design & UX
+- **Aestetica Premium**: Interfaccia pulita con effetti Glassmorphism e animazioni fluide (Framer Motion).
+- **Responsive Design**: Ottimizzato per desktop, tablet e smartphone.
+- **Modalità Dark/Light**: Supporto nativo per il tema del sistema.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **Database**: [MongoDB](https://www.mongodb.com/) con Mongoose
+- **Auth**: [NextAuth.js](https://next-auth.js.org/)
+- **Pagamenti**: [Stripe API](https://stripe.com/)
+- **Email**: [Nodemailer](https://nodemailer.com/)
+- **Stile**: Vanilla CSS Modules (Nessun framework CSS pesante)
+- **Animazioni**: [Framer Motion](https://www.framer.com/motion/)
+- **Icone**: [Lucide React](https://lucide.dev/)
+
+## 🚀 Inizia Subito
+
+### 1. Clona il repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/tuo-username/laundryservice.git
+cd laundryservice
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Installa le dipendenze
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Configura le variabili d'ambiente
+Crea un file `.env.local` nella root del progetto e inserisci le tue chiavi:
+```env
+MONGODB_URI=il_tuo_link_mongodb
+NEXTAUTH_SECRET=una_stringa_casuale_sicura
+NEXTAUTH_URL=http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+STRIPE_SECRET_KEY=sk_test_...
+STRIPE_WEBHOOK_SECRET=whsec_...
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
 
-## Learn More
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=tua@email.com
+SMTP_PASS=tua_app_password
+MAIL_FROM=noreply@aquaclean.it
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Avvia l'applicazione
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔐 Accesso Admin
+Per creare il primo account amministratore:
+1. Avvia l'app in locale.
+2. Visita `http://localhost:3000/api/setup-admin`.
+3. Accedi con: `admin@aquaclean.it` / `AdminPassword123!`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Realizzato con ❤️ per AquaClean.
